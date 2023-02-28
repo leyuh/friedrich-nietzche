@@ -1,0 +1,52 @@
+#h-nav-bar {
+    width: 100vw;
+    left: 0vw;
+    top: 0vh;
+    height: 80px;
+    position: fixed;
+    z-index: 5;
+
+    color: white;
+    font-family: Copperplate;
+    font-weight: 100;
+}
+#h-nav-bar > * {
+    font-weight: inherit;
+    font-family: inherit;
+}
+#h-nav-bar > h1 {
+    position: absolute;
+    margin-left: 20px;
+    font-size: 35px;
+    width: min-content;
+
+}
+#h-nav-bar > h1:hover {
+    cursor: grab;
+    color: black;
+    animation-name: fade;
+    animation-duration: 0.2s;
+}
+#h-nav-bar > ul {
+    list-style: none;
+    right: 0px;
+    top: -10px;
+    height: 60px;
+    position: absolute;
+}
+#h-nav-bar > ul > li {
+    display: inline-block;
+    margin: 30px;
+    font-size: 18px;
+}
+#h-nav-bar > ul > li:hover {
+    cursor: grab;
+    color: black;
+    animation-name: fade;
+    animation-duration: 0.2s;
+}
+
+@keyframes fade {
+    from {color: white}
+    to {color: black}
+}
