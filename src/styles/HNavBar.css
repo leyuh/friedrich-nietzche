@@ -5,28 +5,12 @@
     height: 80px;
     position: fixed;
     z-index: 5;
-
-    color: white;
-    font-family: Copperplate;
-    font-weight: 100;
 }
 #h-nav-bar > * {
     font-weight: inherit;
     font-family: inherit;
 }
-#h-nav-bar > h1 {
-    position: absolute;
-    margin-left: 20px;
-    font-size: 35px;
-    width: min-content;
 
-}
-#h-nav-bar > h1:hover {
-    cursor: grab;
-    color: black;
-    animation-name: fade;
-    animation-duration: 0.2s;
-}
 #h-nav-bar > ul {
     list-style: none;
     right: 0px;
@@ -43,10 +27,16 @@
     cursor: grab;
     color: black;
     animation-name: fade;
-    animation-duration: 0.2s;
+    animation-duration: 0.4s;
 }
 
 @keyframes fade {
     from {color: white}
     to {color: black}
+}
+
+@media only screen and (max-width: 900px) {
+    #h-nav-bar {
+        display: none;
+    }
 }

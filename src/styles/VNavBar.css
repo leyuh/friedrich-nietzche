@@ -1,0 +1,62 @@
+@keyframes vNavOpen {
+    from {right: -340px; background-color: rgba(8, 9, 11, 0);}
+    to {right: 0px; background-color: rgba(8, 9, 11, 0.98);}
+}
+.vNavOpen {
+    animation-name: vNavOpen;
+    animation-duration: 0.5s;
+}
+
+@keyframes vNavClose {
+    from {right: 0px; background-color: rgba(8, 9, 11, 0.98);}
+    to {right: -340px; background-color: rgba(8, 9, 11, 0);}
+}
+.vNavClose {
+    animation-name: vNavClose;
+    animation-duration: 0.5s;
+}
+
+
+
+#v-nav-bar {
+    padding-top: 80px;
+    width: 340px;
+    background-color: rgba(8, 9, 11, 0.98);
+    color: white;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    position: fixed;
+    right: -340px;
+    top: 0px;
+    z-index: 7;
+    height: calc(100vh - 80px);
+}
+
+#v-nav-bar > ul {
+    list-style: none;
+    position: relative;
+    right: 35px;
+}
+
+#v-nav-bar > ul > li {
+    margin-bottom: 35px;
+    font-size: 18px;
+    text-align: right;
+}
+
+
+#v-nav-close-btn {
+    height: 30px;
+    width: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 100;
+    font-size: 30px;
+    float: right;
+    position: absolute;
+    right: 15px;
+    top: 9px;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    text-align: center;
+    border: 0px;
+}

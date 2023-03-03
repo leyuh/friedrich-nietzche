@@ -1,4 +1,18 @@
 
+#about-page {
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    grid-template-rows: 1fr;
+    gap: 10px;
+}
+
+@media only screen and (max-width: 900px) {
+    #about-page {
+
+        grid-template-rows: 0.5fr 1fr 0.5fr;
+        grid-template-columns: 1fr;
+    }
+}
+
 
 #about-bg {
     height: 100%;
@@ -10,9 +24,10 @@
 }
 
 #portrait-img {
-    height: 60vh;
-    width: auto;
-    margin: 20px;
+    height: auto;
+    width: min(70%, 500px);
+    
     z-index: 2;
     object-fit: contain;
+
 }
