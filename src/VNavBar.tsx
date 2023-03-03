@@ -1,14 +1,16 @@
-import {Dispatch, SetStateAction, useEffect, useRef } from 'react';
+import {Dispatch, ReactElement, SetStateAction, useEffect, useRef } from 'react';
 
 import "./styles/VNavBar.css";
 
 
 interface VNavBarProps {
     verNavVis: boolean;
-    setVerNavVis: Dispatch<SetStateAction<boolean>>
+    setVerNavVis: Dispatch<SetStateAction<boolean>>;
+    setCurrPage: Dispatch<SetStateAction<string>>;
+    pages: string[];
 }
 
-export const VNavBar: React.FC<VNavBarProps> = ({verNavVis, setVerNavVis}) => {
+export const VNavBar: React.FC<VNavBarProps> = ({verNavVis, setVerNavVis, setCurrPage, pages}) => {
 
     const vNavRef = useRef<any>(null);
 
@@ -23,10 +25,13 @@ export const VNavBar: React.FC<VNavBarProps> = ({verNavVis, setVerNavVis}) => {
             setVerNavVis(false);
         }}>x</button>
         <ul>
-            <li><a>BIOGRAPHY</a></li>
-            <li><a>PHILOSOPHY</a></li>
-            <li><a>ANALYSIS</a></li>
-            <li><a>CONCLUSION</a></li>
+            {pages.map((val: string, i: number) => {
+                return <li key={i} onClick={() => {
+                    setCurrPage(val);
+                    setVerNavVis(false);
+                    document.documentElement.scrollTop = 0;
+                }}><a>{val}</a></li>
+            })}
         </ul>
     </div>
 

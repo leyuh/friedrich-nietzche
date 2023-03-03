@@ -13,16 +13,6 @@
     }
 }
 
-
-#about-bg {
-    height: 100%;
-    width: 100%;
-    left: 0%;
-    top: 0%;
-    position: absolute;
-    object-fit: cover;
-}
-
 #portrait-img {
     height: auto;
     width: min(70%, 500px);

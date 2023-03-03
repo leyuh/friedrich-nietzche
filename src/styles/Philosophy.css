@@ -1,0 +1,22 @@
+#philosophy-page {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+}
+
+@media only screen and (max-width: 900px) {
+    #philosophy-page {
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+}
+
+#portrait-img-2 {
+    height: auto;
+    width: min(100%, 500px);
+    
+    z-index: 2;
+    object-fit: contain;
+
+}
