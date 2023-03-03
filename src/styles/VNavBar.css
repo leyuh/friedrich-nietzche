@@ -16,6 +16,11 @@
     animation-duration: 0.5s;
 }
 
+.preload {
+    animation-duration: 0s !important;
+    animation-name: none;
+    visibility: hidden !important;
+}
 
 
 #v-nav-bar {

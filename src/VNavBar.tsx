@@ -1,4 +1,4 @@
-import {Dispatch, SetStateAction} from 'react';
+import {Dispatch, SetStateAction, useEffect, useRef } from 'react';
 
 import "./styles/VNavBar.css";
 
@@ -9,7 +9,14 @@ interface VNavBarProps {
 }
 
 export const VNavBar: React.FC<VNavBarProps> = ({verNavVis, setVerNavVis}) => {
-    return <div id="v-nav-bar" className={verNavVis ? "vNavOpen" : "vNavClose"} style={
+
+    const vNavRef = useRef<any>(null);
+
+    useEffect(() => {
+        vNavRef.current.className = "preload";
+    }, [])
+
+    return <div ref={vNavRef} id="v-nav-bar" className={verNavVis ? "vNavOpen" : "vNavClose"} style={
         verNavVis ? {right: "0px"} : {right: "-340px"}
     }>
         <button id="v-nav-close-btn" onClick={() => {
