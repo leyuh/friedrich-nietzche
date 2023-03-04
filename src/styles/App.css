@@ -34,7 +34,6 @@
 
     padding: 30px;
     padding-top: 80px;
-
 }
 
 
@@ -42,10 +41,12 @@
 
     background-color: rgba(0, 1, 7, 0.2);
     z-index: 2;
-    padding: 20px;
+    padding: 15px;
     border-radius: 5px;
 
-    width: 70%;
+    max-width: 1fr;
+    min-width: 70%;
+    max-height: 1fr;
 
     display: flex;
     align-items: center;
@@ -55,7 +56,7 @@
     font-weight: 100;
     font-size: 17px;
     color: white;
-    line-height: 24px;
+    line-height: 20px;
 }
 
 .clouds-bg {

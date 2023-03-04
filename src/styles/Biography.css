@@ -14,7 +14,7 @@
 }
 
 #portrait-img {
-    height: auto;
+    max-height: 70vh;
     width: min(70%, 500px);
     
     z-index: 2;
